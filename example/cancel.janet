@@ -21,4 +21,4 @@
 
 (ctrl-c/mask true)
 (print "running background task, press ctrl-c to cancel...")
-(run-command-with-cancel ["sh" "-c" "echo hello ; sleep 5; echo goodbyte" ])
+(run-command-with-cancel ["sh" "-c" "echo hello ; sleep 5; echo goodbye" ])
