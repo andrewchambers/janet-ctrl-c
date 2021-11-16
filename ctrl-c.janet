@@ -2,5 +2,4 @@
 
 (defn await
   [stream]
-  (ev/read stream 128)
-  nil)
+  (truthy? (ev/read stream 128)))

@@ -8,8 +8,7 @@
     (ev/call 
       (fn []
         (try
-          (do
-            (ctrl-c/await signals)
+          (when (ctrl-c/await signals)
             (os/execute ["kill" (string (proc :pid))] :xp))
           ([err f] nil)))))
   (def rc (os/proc-wait proc))
